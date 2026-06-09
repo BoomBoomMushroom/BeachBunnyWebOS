@@ -1,0 +1,80 @@
+body{
+    background-image: url("./wallpapers/vertigo.jpg");
+    background-size: cover;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    color: black;
+    background-color: hsla(326, 74%, 63%, 0.9);
+}
+
+.window{
+    width: 500px;
+    padding: 16px;
+
+    border: solid;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: hsla(331, 63%, 77%, 0.9);
+}
+
+.header{
+    height: 40px;
+    border-radius: 8px 8px 0px 0px;
+    cursor: move;
+}
+
+.headerTitle{
+    position: absolute;
+    left: 0px;
+    transform: translate(0%, -50%); /* Use h3 elements as text so this works */
+    margin-right: 16px;
+    padding: 10px;
+}
+
+.closeWindow{
+    position: absolute;
+    right: 0px;
+    transform: translate(0%, -40%);
+    margin-right: 16px;
+    padding: 5px;
+
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    border-radius: 10px;
+
+    background-color: rgb(156, 10, 81);
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+.noSelectText{
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.hidden{
+    display: none;
+}
