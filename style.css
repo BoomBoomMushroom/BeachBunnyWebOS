@@ -66,7 +66,30 @@ body{
 }
 
 
+.appsContainer{
+    padding-top: 64px;
+}
 
+.app{
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+
+    position: absolute;
+}
+
+.app > img{
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+}
+.app > p{
+    margin: 0px;
+}
+
+.selectedApp{
+    background-color: hsla(218, 100%, 69%, 0.5);
+}
 
 
 
