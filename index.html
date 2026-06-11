@@ -11,21 +11,20 @@
         </div>
 
         <div class="appsContainer">
-            <!--
-                All of our apps go here. when we close a window we should make it's app visible here so we can reopen it
-            -->
-            
             <div onOpenApp="openPlaylistBB" class="app noSelectText">
                 <img src="./appLogos/spotifyLogo.svg">
                 <p>playlist.bb</p>
+            </div>
+
+            <div onOpenApp="openWebrings" class="app noSelectText" style="top: 200px;">
+                <img src="./appLogos/webringsLogo.png">
+                <p>webrings</p>
             </div>
         </div>
 
         <div id="playlistBB_window" class="window hidden">
             <div class="topBar header noSelectText">
                 <h3 class="headerTitle">playlist.bb</h3>
-                <!--
-                    -->
                 <p class="closeWindow">❌</p>
             </div>
             <h1>BeachBunnyOS</h1>
@@ -38,6 +37,42 @@
                 <li>Video Games</li>
                 <li>Learning Swedish</li>
             </ul>
+        </div>
+
+        <div id="webrings_window" class="window hidden">
+            <div class="topBar header noSelectText">
+                <h3 class="headerTitle">webrings</h3>
+                <p class="closeWindow">❌</p>
+            </div>
+            <h1>Webrings</h1>
+            <h3>My collection of webrings &lt;3</h3> <!-- use &lt; for the "<" since html is fucked up and evil  -->
+
+            <!-- Homebrew ring -->
+            <script src="https://homebrew.cresentri.com/webring.js" data="3DS"></script>
+            <br>
+
+            <!-- No Ai Webring -->
+            <map name="noaicode">
+                <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="55,0,255,0,255,13,294,13,294,51,55,51" alt="no ai webring" title="no ai webring">
+                <area href="https://baccyflap.com/noai/?prv&s=sab" target="_top" shape="poly" coords="1,25,52,0,52,51" alt="previous" title="previous">
+                <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="258,1,294,10" alt="random" title="random">
+                <area href="https://baccyflap.com/noai/?nxt&s=sab" target="_top" shape="poly" coords="349,25,297,0,297,51" alt="next" title="next">
+            </map>
+            <img usemap="#noaicode" src="https://baccyflap.com/noai/codewidget-l.gif" alt="a long white bar with a background of blurry Python code, with the text AI? AIN'T INTERESTED! / THE NO AI WEBRING over it. In the top right corner is a button labeled RANDOM and to either side of the bar are rectangles labeled PREV and NEXT">
+            <br><br>
+
+            <!-- transing the internet -->
+            <script src="https://transring.neocities.org/ring.js"></script>
+            <br>
+
+            <!-- vocaloid webring -->
+            <div id="vocaring">
+                <link rel="stylesheet" href="https://electric-tenshi.nekoweb.org/vocaring/vocaring.css">
+                <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-variables.js"></script>
+                <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js"></script>
+            </div>
+            
+
         </div>
 
         <script src="./index.js"></script>

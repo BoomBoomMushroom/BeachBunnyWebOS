@@ -107,7 +107,8 @@ for(let i=0; i<allApps.length; i++){
 }
 
 let appFunctions = {
-    "openPlaylistBB": openPlaylistBB
+    "openPlaylistBB": openPlaylistBB,
+    "openWebrings": openWebringsApp
 }
 
 function tapApp(element){
@@ -157,6 +158,12 @@ function makeGreatestZIndex(element){
 function openPlaylistBB(){
     let windowElement = document.getElementById("playlistBB_window")
 
+    makeGreatestZIndex(windowElement) // move to the top
+    revealElement(windowElement)
+}
+
+function openWebringsApp(){
+    let windowElement = document.getElementById("webrings_window")
     makeGreatestZIndex(windowElement) // move to the top
     revealElement(windowElement)
 }
