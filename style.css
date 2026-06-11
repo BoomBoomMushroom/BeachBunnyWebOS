@@ -5,14 +5,16 @@
     font-style: normal;
 }
 
-
 .sfpixelate{
     font-family: "SF Pixelate";
 }
 
+
 body{
     background-image: url("./wallpapers/vertigo.jpg");
     background-size: cover;
+    
+    overflow: hidden;
 }
 
 .topBar{
@@ -46,8 +48,12 @@ body{
 }
 
 .window{
+    max-height: 75%;
     width: 500px;
     padding: 16px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
     
     border: solid;
     border-radius: 10px;

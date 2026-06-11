@@ -61,8 +61,11 @@ function makeElementDraggable(element, isApp){
         currentY = initY - e.clientY;
         initX = e.clientX;
         initY = e.clientY;
-        element.style.top = (element.offsetTop - currentY) + "px";
-        element.style.left = (element.offsetLeft - currentX) + "px";
+
+        let newY = element.offsetTop - currentY
+        let newX = element.offsetLeft - currentX
+        element.style.top = newY + "px";
+        element.style.left = newX + "px";
     }
 
      function stopDragging() {
