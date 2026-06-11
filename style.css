@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "SF Pixelate";
+    src: url('./SFPixelate/SFPixelate.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.sfpixelate{
+    font-family: "SF Pixelate";
+}
+
 body{
     background-image: url("./wallpapers/vertigo.jpg");
     background-size: cover;
@@ -5,6 +17,7 @@ body{
 
 .topBar{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     
@@ -20,17 +33,31 @@ body{
     background-color: hsla(326, 74%, 63%, 0.9);
 }
 
+.topBarButtonsDiv{
+    /*
+    max-width: 180px; */ /* Each button is 86x15, 86 * 2 = 172, so round up to 180px */
+    height: fit-content;
+}
+
+#topBarTime{
+    white-space: nowrap;
+    width: max-content;
+    display: block;
+}
+
 .window{
     width: 500px;
     padding: 16px;
-
+    
     border: solid;
     border-radius: 10px;
-
+    
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    --tx: -50%;
+    --ty: -50%;
+    transform: translate(var(--tx), var(--ty));
 
     background-color: hsla(331, 63%, 77%, 0.9);
 }
@@ -44,7 +71,6 @@ body{
 .headerTitle{
     position: absolute;
     left: 0px;
-    transform: translate(0%, -50%); /* Use h3 elements as text so this works */
     margin-right: 16px;
     padding: 10px;
 }
@@ -52,7 +78,6 @@ body{
 .closeWindow{
     position: absolute;
     right: 0px;
-    transform: translate(0%, -40%);
     margin-right: 16px;
     padding: 5px;
 
@@ -91,6 +116,13 @@ body{
     background-color: hsla(218, 100%, 69%, 0.5);
 }
 
+.netNeighborDiv{
+    display: flex;
+    align-items: center;
+}
+.netNeighborDiv > a{
+    margin-right: 10px;
+}
 
 
 .noSelectText{
@@ -100,4 +132,8 @@ body{
 
 .hidden{
     display: none;
+}
+
+.overflowScroll{
+    overflow-y: scroll;
 }

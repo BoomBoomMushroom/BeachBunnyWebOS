@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+         
+        <link rel="stylesheet" href="https://cdring.neocities.org/cdring/onionring.css">
     </head>
 
     <body>
         <div id="topBar" class="topBar noSelectText">
             <h3>BeachBunnyOS</h3>
+            <div style="width: 16px;"></div>
+            
+            <!-- Cool Buttons -->
+            <div class="topBarButtonsDiv">
+                <img src="./buttons/transgender.png">
+                <img src="./buttons/cisn't.png">
+                <img src="./buttons/transfem.png">
+            </div>
+            <div class="topBarButtonsDiv">
+                <img src="./buttons/lesbian.png">
+                <img src="./buttons/sheher.png">
+            </div>
+            <div class="topBarButtonsDiv">
+                <img src="./buttons/usa.png">
+                <img src="./buttons/swedish.png">
+            </div>
+            <div class="topBarButtonsDiv">
+                <img src="./buttons/cat_owner.png">
+                <img src="./buttons/minecraft.png">
+                <img src="./buttons/pokemon.png">
+            </div>
+            <div class="topBarButtonsDiv">
+                <img src="./buttons/switch.png">
+                <img src="./buttons/pc.png">
+                <a href=https://www1.flightrising.com/forums/cc/3078623><img src="./buttons/freeButtons.png"></a>
+            </div>
+
             <h3 id="topBarTime">6/9/2026 13:49:00</h3>
         </div>
 
         <div class="appsContainer">
-            <div onOpenApp="openPlaylistBB" class="app noSelectText">
+            <div onOpenApp="openPlaylistBB" class="app noSelectText" style="left: 30px; top: 80px" id="openPlaylistAppDiv">
                 <img src="./appLogos/spotifyLogo.svg">
                 <p>playlist.bb</p>
             </div>
 
-            <div onOpenApp="openWebrings" class="app noSelectText" style="top: 200px;">
+            <div onOpenApp="openWebrings" class="app noSelectText" style="left: 30px; top: 180px;">
                 <img src="./appLogos/webringsLogo.png">
                 <p>webrings</p>
+            </div>
+
+            <div onOpenApp="openAboutMe" class="app noSelectText" style="left: 20px; top: 280px;">
+                <img src="./appLogos/aboutMe.gif">
+                <p>about_me.txt</p>
+            </div>
+
+            <div onOpenApp="openNetNeighbors" class="app noSelectText" style="left: 15px; top: 380px;">
+                <img src="./appLogos/netNeighborsLogo.png">
+                <p>neighbors.cool</p>
             </div>
         </div>
 
@@ -27,16 +66,9 @@
                 <h3 class="headerTitle">playlist.bb</h3>
                 <p class="closeWindow">❌</p>
             </div>
-            <h1>BeachBunnyOS</h1>
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6sL7gpBP73YmO7TvHE5pPW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h2>My hobbies</h2>
-            <ul>
-                <li>Programming</li>
-                <li>Soldering</li>
-                <li>Video Games</li>
-                <li>Learning Swedish</li>
-            </ul>
+            <h1>My Beach Bunny Playlist</h1>
+            <h3>It's got all my favorite Beach Bunny songs!</h3>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6sL7gpBP73YmO7TvHE5pPW?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <div id="webrings_window" class="window hidden">
@@ -44,35 +76,113 @@
                 <h3 class="headerTitle">webrings</h3>
                 <p class="closeWindow">❌</p>
             </div>
-            <h1>Webrings</h1>
-            <h3>My collection of webrings &lt;3</h3> <!-- use &lt; for the "<" since html is fucked up and evil  -->
-
-            <!-- Homebrew ring -->
-            <script src="https://homebrew.cresentri.com/webring.js" data="3DS"></script>
             <br>
+            <div class="overflowScroll" style="height: 700px;">
+                <h3>My collection of webrings &lt;3</h3> <!-- use &lt; for the "<" since html is fucked up and evil  -->
 
-            <!-- No Ai Webring -->
-            <map name="noaicode">
-                <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="55,0,255,0,255,13,294,13,294,51,55,51" alt="no ai webring" title="no ai webring">
-                <area href="https://baccyflap.com/noai/?prv&s=sab" target="_top" shape="poly" coords="1,25,52,0,52,51" alt="previous" title="previous">
-                <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="258,1,294,10" alt="random" title="random">
-                <area href="https://baccyflap.com/noai/?nxt&s=sab" target="_top" shape="poly" coords="349,25,297,0,297,51" alt="next" title="next">
-            </map>
-            <img usemap="#noaicode" src="https://baccyflap.com/noai/codewidget-l.gif" alt="a long white bar with a background of blurry Python code, with the text AI? AIN'T INTERESTED! / THE NO AI WEBRING over it. In the top right corner is a button labeled RANDOM and to either side of the bar are rectangles labeled PREV and NEXT">
-            <br><br>
+                <!-- Homebrew ring -->
+                <script src="https://homebrew.cresentri.com/webring.js" data="3DS"></script>
+                <br>
 
-            <!-- transing the internet -->
-            <script src="https://transring.neocities.org/ring.js"></script>
-            <br>
+                <!-- No Ai Webring -->
+                <map name="noaicode">
+                    <area href="https://baccyflap.com/noai" target="_blank" shape="poly" coords="55,0,255,0,255,13,294,13,294,51,55,51" alt="no ai webring" title="no ai webring">
+                    <area href="https://baccyflap.com/noai/?prv&s=sab" target="_top" shape="poly" coords="1,25,52,0,52,51" alt="previous" title="previous">
+                    <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="258,1,294,10" alt="random" title="random">
+                    <area href="https://baccyflap.com/noai/?nxt&s=sab" target="_top" shape="poly" coords="349,25,297,0,297,51" alt="next" title="next">
+                </map>
+                <img usemap="#noaicode" src="https://baccyflap.com/noai/codewidget-l.gif" alt="a long white bar with a background of blurry Python code, with the text AI? AIN'T INTERESTED! / THE NO AI WEBRING over it. In the top right corner is a button labeled RANDOM and to either side of the bar are rectangles labeled PREV and NEXT">
+                <br><br>
 
-            <!-- vocaloid webring -->
-            <div id="vocaring">
-                <link rel="stylesheet" href="https://electric-tenshi.nekoweb.org/vocaring/vocaring.css">
-                <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-variables.js"></script>
-                <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js"></script>
+                <!-- transing the internet -->
+                <script src="https://transring.neocities.org/ring.js"></script>
+                <br>
+
+                <!-- transfem webring -->
+                <script defer src="https://fem.nz/ring/transfemring.js" data-widget="transgender"></script>
+                <br>
+
+                <!-- vocaloid webring -->
+                <div id="vocaring">
+                    <link rel="stylesheet" href="https://electric-tenshi.nekoweb.org/vocaring/vocaring.css">
+                    <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-variables.js"></script>
+                    <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js"></script>
+                </div>
+                <br>
+                
+                <!-- The WiiRing -->
+                <div style="width: 135px;"><iframe style="border: none; width: 100%" src="https://wiiring.jeith.com/snippet?site=YOUR_SITE_HERE&variant=standard"></iframe></div>
+
+                <!-- CDRING -->
+                <div id='cdr'>
+                    <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+                    <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
+                </div>
+                <br>
+
+                <!-- GameRing -->
+                <div id='gamer-ring'>
+                    <script type="text/javascript" src="https://gamerring.neocities.org/js/variables.js"></script>
+                    <script type="text/javascript" src="https://gamerring.neocities.org/js/widget-minimal.js"></script>
+                </div>
             </div>
-            
+        </div>
 
+        <div id="aboutMe_window" class="window" style="top: 350px; left: calc(100% - 10px); --tx: -100%">
+            <div class="topBar header noSelectText">
+                <h3 class="headerTitle">about_me.txt</h3>
+                <p class="closeWindow">❌</p>
+            </div>
+            <br>
+            <div class="overflowScroll sfpixelate" style="/* height: 700px; */">
+                <h1>About me!!</h1>
+                <p>Hi hi! I'm Sabrina (She/Her), <strong>THE</strong> #1 Beach Bunny fan in the world!<br>
+                    I've been in love with making websites since late middle school,
+                    during which I created my most popular website, which was a coolmathgames adjacent game website where I would program games in html and js and upload them for people at my school to play.<br>
+                    The API, for accounts and other stuff, is now defunct as replit has changed making it impossible for me to host 24/7 APIs.
+                </p>
+                <p>A bit more about me:<br>
+                    I'm from the United States but I hope to move to Sweden someday<br>
+                    I've got 3 super cute cats!! Jackpot, Tiny, and Mikey<br>
+                    My favorite video game is probably Minecraft or any Jackbox party pack.<br>
+                    My favorite gaming console is the Wii U. But I love my 3DS, Switch, and N64<br>
+                    My favorite YouTube channel is <a href="https://www.youtube.com/@SebastianLague">Sebastian Lague</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="netNeighbors_window" class="window">
+            <div class="topBar header noSelectText">
+                <h3 class="headerTitle">net_neighbors.cool</h3>
+                <p class="closeWindow">❌</p>
+            </div>
+            <br>
+            <div class="overflowScroll sfpixelate" style="max-height: 500px;">
+                <h1>My net neighbors :D</h1>
+
+                <div class="netNeighborDiv">
+                    <a href="https://jamie.monster/" target=blank><img src="https://jamie.monster/images/jambutton.png"></a>
+                    Jamie's website feels so silly I love it! It reminds me of the late 2010s where I would play Roblox and had a bunch of those stock cat images.
+                </div>
+                <br>
+                <div class="netNeighborDiv">
+                    <a href="https://nathanntan.neocities.org/" target="_blank"><img src="https://nathanntan.neocities.org/avatars/button%20(1).png" alt="" style="width:88px;height:31px;border:0"></a>
+                    Nathan's website's layout is what I wanted to do for my website. He is where I got the buttons (in the top bar) from. I've also found some cool webrings from him, like the GameRing and WiiRing
+                </div>
+                <br>
+                <div class="netNeighborDiv">
+                    <a href="https://aquahinnn.neocities.org/" target="_blank"><img src="./netNeighborButtons/aquahinnn.gif" alt="Visit aquahinnn"></a> 
+                    I love how stylized Miles's website is. It feels so nice to navigate and is organized in a way that just clicks in my head
+                </div>
+
+                <br>
+                <h4>Want to link me?</h4>
+                <p>Copy the code below and paste it in your website. Hotlink is okay! <br>(atm i don't have a button or anything but I will fix this when I get actually finish this and join webrings)</p>
+                <textarea style="width: 50%; height: 100px;">
+                    <!-- My button to link back to me! todo: get a url and make a button ; also dw this text doesn't show up on the website -->
+                    <a href="https://TODO.PutMyWebsiteLinkHere/" target="_blank"><img src="TODO.PutMyWebsiteLinkHere/netNeighborButtons/AlsoTodo_MakeAButton.gif" alt="Visit Sabrina's Website"></a> 
+                </textarea>
+            </div>
         </div>
 
         <script src="./index.js"></script>

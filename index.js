@@ -37,10 +37,12 @@ function makeElementDraggable(element, isApp){
         }
     }
     else{
-        console.log("normal ele")
         element.onmousedown = startDragging;
     }
 
+    if(isApp == false){
+        element.onmousedown = (e)=>{ makeGreatestZIndex(element); }
+    }
 
     function startDragging(e){
         e.preventDefault()
@@ -108,7 +110,9 @@ for(let i=0; i<allApps.length; i++){
 
 let appFunctions = {
     "openPlaylistBB": openPlaylistBB,
-    "openWebrings": openWebringsApp
+    "openWebrings": openWebringsApp,
+    "openAboutMe": openAboutMe,
+    "openNetNeighbors": openNetNeighbors,
 }
 
 function tapApp(element){
@@ -132,7 +136,7 @@ function tapApp(element){
         selectElement(null)
 
         appFunctions[element.getAttribute("onOpenApp")]()
-        //console.log("open app")
+        now = 0 // prevent spam clicking from opening an app a bajillion times
     }
     
     lastTapTime = now
@@ -160,6 +164,11 @@ function openPlaylistBB(){
 
     makeGreatestZIndex(windowElement) // move to the top
     revealElement(windowElement)
+
+    let appIconElement = document.getElementById("openPlaylistAppDiv").getElementsByTagName("img")[0]
+    let newIcons = ["./wallpapers/emotionalCreature.jpg", "./wallpapers/honeymoon.jpg", "./wallpapers/promQueen.jpg", "./wallpapers/tunnelVision.jpg", "./wallpapers/yearOfTheOptimist.jpg", ]
+    let i = Math.floor(Math.random() * newIcons.length)
+    appIconElement.src = newIcons[i]
 }
 
 function openWebringsApp(){
@@ -167,3 +176,24 @@ function openWebringsApp(){
     makeGreatestZIndex(windowElement) // move to the top
     revealElement(windowElement)
 }
+
+function openAboutMe(){
+    let windowElement = document.getElementById("aboutMe_window")
+    makeGreatestZIndex(windowElement) // move to the top
+    revealElement(windowElement)
+}
+
+function openNetNeighbors(){
+    let windowElement = document.getElementById("netNeighbors_window")
+    makeGreatestZIndex(windowElement) // move to the top
+    revealElement(windowElement) 
+}
+
+
+document.addEventListener("mousedown",(e)=>{
+    if (event.target != document.body && event.target != document.documentElement) { return }
+
+    selectElement(null)
+})
+
+// todo: make a button and add a loading screen
