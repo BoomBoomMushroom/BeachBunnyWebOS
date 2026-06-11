@@ -68,6 +68,10 @@ body{
     background-color: hsla(331, 63%, 77%, 0.9);
 }
 
+.windowContent{
+    padding-right: 15px;
+}
+
 .header{
     height: 40px;
     border-radius: 8px 8px 0px 0px;
