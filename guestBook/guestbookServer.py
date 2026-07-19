@@ -34,12 +34,17 @@ def guestbookSubmit():
     message: str = data["message"]
     botProtection: str = data["botProtection"]
     
-    if len(link) > 0: return "Success" # honey pot triggered, humans cannot see this field, silently say we've failed
+    returnData = f"Successfully submitted your guestbook entry! Make sure to reload the site to see your entry.\nYou can now close this tab <3"
+    failData = f"Some information you entered is invalid! You can close this tab though!"
 
-    if len(name) > 100: return "Success" # Too large of a name
-    if len(message) > 5000: return "Success" # message too large
-    if len(websiteUrl) > 2000: return "Success" # HAS to be a fake url b/c they cannot be longer than 2000 chars
-    if botProtection.lower().strip() != "sabrina": return "Success" # Failed to enter my name, not a human
+    # honey pot triggered, humans cannot see this field, silently say we've failed
+    # return a success so bots dont freak out and try to send another message
+    if len(link) > 0: return returnData
+
+    if len(name) > 100: return failData # Too large of a name
+    if len(message) > 5000: return failData # message too large
+    if len(websiteUrl) > 2000: return failData # HAS to be a fake url b/c they cannot be longer than 2000 chars
+    if botProtection.lower().strip() != "sabrina": return failData # Failed to enter my name, not a human
 
     # All the info looks valid and doesn't seem like a bot/spam
     if webhookUrl != None:
@@ -57,7 +62,7 @@ def guestbookSubmit():
     allEntries.insert(0, messageData) # insert to we dont have to reverse the list to get most recent entries
     with open(guestbookEntriesPath, "w") as f: json.dump(allEntries, f, indent=4)
 
-    return "Success"
+    return returnData
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
