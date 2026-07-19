@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Meta tags -->
+        <meta name="robots" content="noai, noimageai">
+
+        <!-- CSS -->
         <link rel="stylesheet" href="./style.css">
         <!-- for cd ring -->
         <link rel="stylesheet" href="https://cdring.neocities.org/cdring/onionring.css">
+        <!-- for ds ring -->
+        <link rel="stylesheet" href="https://dsring.neocities.org/dswidget/onionring.css">
     </head>
 
     <body>
+        <!--
+        Todo: add my nonbot pledge to my site, it'll get approved within 48 hours
+        <a href="https://nonbot.org/pledged/view/a24c3868-b180-47f4-83a2-27821742f480" target="_blank">
+            <img style="height:128px;margin-top:10px;margin-bottom:10px;" src="https://nonbot.org/images/nonbot_pledged_logo.svg" alt="Human-made Content">
+        </a>
+        -->
+
         <div id="topBar" class="topBar noSelectText">
             <h3>BeachBunnyOS</h3>
             <div style="width: 16px;"></div>
@@ -83,15 +96,28 @@
                 <h3>My collection of webrings &lt;3</h3> <!-- use &lt; for the "<" since html is fucked up and evil  -->
 
                 <!--
+                To apply someday:
+                Musicians Webring - When I actaully get around to making and releasing music - https://lydels.neocities.org/musicianswebring/webring
+
+                -->
+
+                <!--
                 Application statuses
                 Homebrew Ring: Applied, but applications are paused (last checked 2026/7/18)
-                No AI Webring: Applied!
-                Transing the internet: Applied, but they said it WILL take a long time 😔 (https://transring.neocities.org/join)
-                transfem webring: Applied!
+                No AI Webring: Applied
+                transfem webring: Applied
                 Vocaloid webring: Broken submission, so I sent them an email instead
                 WiiRing: Applied
                 CDRING: Applied
                 GameRing: Applied
+                DS Ring: Applied, allow up to 2 weeks from 2026/7/19
+                DroidRing: Applied
+                IndieRing: Applied
+                Computering Webring: Applied
+                
+
+                Transing the internet: Joined!
+                Hotline Ring: Automatically joined
                 -->
 
                 <!-- Homebrew ring -->
@@ -139,8 +165,91 @@
                     <script type="text/javascript" src="https://gamerring.neocities.org/js/variables.js"></script>
                     <script type="text/javascript" src="https://gamerring.neocities.org/js/widget-minimal.js"></script>
                 </div>
+                <br>
 
+                <!-- DS Ring -->
+                <div id="dsring">
+                    <script type="text/javascript" src="https://dsring.neocities.org/dswidget/onionring-variables.js"></script>
+                    <script type="text/javascript" src="https://dsring.neocities.org/dswidget/onionring-widget.js"></script>
+                </div>
+                <br>
 
+                <!-- DroidRing -->
+                <div class="droidringwidget">
+                    <a href="https://kanandraw.neocities.org/stuffs/droidring/home"><img src="https://kanandraw.neocities.org/stuffs/droidring/assets/logo.png" style="width: 200px;"></a><br/>
+                    <img src="https://kanandraw.neocities.org/stuffs/droidring/assets/droidwidget.png" style="width: 115px;"><br>
+                    <div class="buttonsdroidring">
+                    <a href="https://kanandraw.neocities.org/stuffs/droidring/home?action=previous"><button class="navdroidring">←</button></a>
+                    <a href="https://kanandraw.neocities.org/stuffs/droidring/home?action=random"><button class="navdroidring" style="position: relative; top: 1.6px;">⚄</button></a>
+                    <a href="https://kanandraw.neocities.org/stuffs/droidring/home?action=next"><button class="navdroidring">→</button></a>
+                    </div>
+                    <style>
+                        .droidringwidget {
+                        font-family: 'Droid Sans',sans-serif;
+                        align-content: center;
+                        text-align: center;
+                        width: 215px;
+                        border: 1px solid #666666;
+                        background: linear-gradient(0deg, black, #000000db);
+                        padding: 5px;
+                        }
+                        .buttonsdroidring {
+                        background: #989898;
+                        padding: 4px;
+                        margin: -5px;
+                        }
+                        
+                        .navdroidring {
+                        background: linear-gradient(to bottom, #F1F1F1, #B8B8B8);
+                        padding: 5px;
+                        color: black;
+                        box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003B;
+                        border: none;
+                        width: 50px;
+                        height: 27px;
+                        min-width: 50px;
+                        }
+                        .navdroidring:active {
+                        background: linear-gradient(to bottom,#FFD554,#E99D00);
+                        }
+                        /* .navdroidring:hover {
+                        background: linear-gradient(to bottom, #ffebc4, #f2f2f2);
+                        } */
+                    </style>
+                </div>
+                <br>
+
+                <!-- IndieRing -->
+                <iframe src="https://xpace.nekoweb.org/webring/widget.html?site=sab" width="266px" height="201px" style="border:none;"></iframe>
+                <br><br>
+
+                <!-- Computering webring -->
+                <div class="genericRing" id="computering">
+                    <table>
+                        <tbody><tr>
+                        <td class="webring-prev"><a href="PUT PREV HERE">←</a></td>
+                        <td class="webring-info">Computering!<br>
+                        <span class="webring-links">
+                            <a href="javascript:void(0)" onclick="randomSite()">random</a>
+                            <a href="https://sosumi.xyz/computering/index.html">index</a>
+                            <a href="https://allium.house/garden/onionring/">what is this?</a></span></td>
+                        <td class="webring-next"><a href="PUT NEXT HERE">→</a></td>
+                        </tr>
+                    </tbody></table>
+                
+                    <script type="text/javascript" src="https://sosumi.xyz/computering/onionring-variables.js"></script>
+                    <script type="text/javascript" src="https://sosumi.xyz/computering/onionring-widget.js"></script>
+                </div>
+                <br>
+
+                <!-- Hotline Ring -->
+                <div>
+                    <h1 style="color:white; font-size: 2em;">
+                        <a href="https://hotlinewebring.club/sabrina/next" style="text-decoration: none; color: inherit;">←</a>
+                        <i>Hotline Webring</i>
+                        <a href="https://hotlinewebring.club/sabrina/previous" style="text-decoration: none; color: inherit;">→</a>
+                    </h1>
+                </div>
             </div>
         </div>
 
