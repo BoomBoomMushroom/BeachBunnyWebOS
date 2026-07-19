@@ -105,7 +105,8 @@ let largestZIndex = 1
 
 let allApps = document.getElementsByClassName("app")
 for(let i=0; i<allApps.length; i++){
-    makeElementDraggable(allApps[i], true)
+    // I actually dont like how I can drag the apps, I just don't really like it
+    //makeElementDraggable(allApps[i], true)
     allApps[i].addEventListener("click", ()=>{
         tapApp(allApps[i])
     })
@@ -171,7 +172,8 @@ function openPlaylistBB(){
     let appIconElement = document.getElementById("openPlaylistAppDiv").getElementsByTagName("img")[0]
     let newIcons = ["./wallpapers/emotionalCreature.jpg", "./wallpapers/honeymoon.jpg", "./wallpapers/promQueen.jpg", "./wallpapers/tunnelVision.jpg", "./wallpapers/yearOfTheOptimist.jpg", ]
     let i = Math.floor(Math.random() * newIcons.length)
-    appIconElement.src = newIcons[i]
+    // i've decided i dont like this feature, bye bye ms feature!
+    //appIconElement.src = newIcons[i]
 }
 
 function openWebringsApp(){
