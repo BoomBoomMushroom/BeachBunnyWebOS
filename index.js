@@ -7,8 +7,8 @@ let topBarTimeInterval = null
 function startPreciseClock() {
     const now = new Date();
     const delay = 1000 - now.getMilliseconds();
-    let timeStr = now.toLocaleString('en-US', {hour12: false})
-    timeStr = timeStr.replace(",", "")
+    let timeStr = now.toLocaleString('se-SV', {hour12: false}) // Swedish time format :D
+    timeStr = timeStr.replace(",", "") // only needed for en-US locale
     topBarTimeElement.innerText = timeStr
 
     topBarTimeInterval = setTimeout(startPreciseClock, delay)
@@ -117,6 +117,7 @@ let appFunctions = {
     "openWebrings": openWebringsApp,
     "openAboutMe": openAboutMe,
     "openNetNeighbors": openNetNeighbors,
+    "openGuestBook": openGuestBook,
 }
 
 function tapApp(element){
@@ -169,11 +170,13 @@ function openPlaylistBB(){
     makeGreatestZIndex(windowElement) // move to the top
     revealElement(windowElement)
 
+    // i've decided i dont like this feature, bye bye ms feature!
+    /*
     let appIconElement = document.getElementById("openPlaylistAppDiv").getElementsByTagName("img")[0]
     let newIcons = ["./wallpapers/emotionalCreature.jpg", "./wallpapers/honeymoon.jpg", "./wallpapers/promQueen.jpg", "./wallpapers/tunnelVision.jpg", "./wallpapers/yearOfTheOptimist.jpg", ]
     let i = Math.floor(Math.random() * newIcons.length)
-    // i've decided i dont like this feature, bye bye ms feature!
-    //appIconElement.src = newIcons[i]
+    appIconElement.src = newIcons[i]
+    */
 }
 
 function openWebringsApp(){
@@ -194,6 +197,11 @@ function openNetNeighbors(){
     revealElement(windowElement) 
 }
 
+function openGuestBook(){
+    let windowElement = document.getElementById("guestbook_window")
+    makeGreatestZIndex(windowElement)
+    revealElement(windowElement) 
+}
 
 document.addEventListener("mousedown",(e)=>{
     if (event.target != document.body && event.target != document.documentElement) { return }
@@ -201,4 +209,4 @@ document.addEventListener("mousedown",(e)=>{
     selectElement(null)
 })
 
-// todo: make a button and add a loading screen
+// todo: add a loading screen

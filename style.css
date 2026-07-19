@@ -108,7 +108,8 @@ body{
 .app{
     text-align: center;
     padding: 10px;
-    width: fit-content;
+    /* width: fit-content; */
+    width: 120px;
 
     position: absolute;
 }
@@ -120,6 +121,17 @@ body{
 }
 .app > p{
     margin: 0px;
+    background-color: hsla(0, 0%, 100%, 0.6); /* add some contrast */
+
+    /* width + padding to make it fit the text w/ a little bit of wiggle room */
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    /* center it back under the middle of the icon */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
 }
 
 .selectedApp{
@@ -134,6 +146,23 @@ body{
     margin-right: 10px;
 }
 
+#guestbookSubmit > input, #guestbookSubmit > textarea{
+    border: 1px solid grey;
+    border-radius: 0px;
+    background-color: hsla(331, 71%, 85%, 0.5);
+    font-size: medium;
+}
+#guestbookSubmit > input[type=submit]{
+    background-color: rgb(255, 209, 231) !important;
+}
+
+.guestbookEntry{
+    background-color: hsla(331, 59%, 70%, 0.9);
+    padding: 2px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
 
 .noSelectText{
     user-select: none;
@@ -146,4 +175,8 @@ body{
 
 .overflowScroll{
     overflow-y: scroll;
+}
+
+.noTextDecor{
+    text-decoration: none;
 }

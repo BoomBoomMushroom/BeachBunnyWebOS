@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>BeachBunnyOS</title>
+        <link rel="icon" type="image/x-icon" href="./assets/icon.png">
         <!-- Meta tags -->
         <meta name="robots" content="noai, noimageai">
+        
 
         <!-- CSS -->
         <link rel="stylesheet" href="./style.css">
@@ -46,8 +49,8 @@
                 <img src="./buttons/pokemon.png">
             </div>
             <div class="topBarButtonsDiv">
-                <img src="./buttons/switch.png">
                 <img src="./buttons/pc.png">
+                <img src="./buttons/switch.png">
                 <a href=https://www1.flightrising.com/forums/cc/3078623><img src="./buttons/freeButtons.png"></a>
             </div>
 
@@ -55,24 +58,29 @@
         </div>
 
         <div class="appsContainer">
-            <div onOpenApp="openPlaylistBB" class="app noSelectText" style="left: 30px; top: 80px" id="openPlaylistAppDiv">
-                <img src="./appLogos/spotifyLogo.svg">
+            <div onOpenApp="openPlaylistBB" class="app noSelectText" style="left: 0px; top: 80px" id="openPlaylistAppDiv">
+                <img src="./appLogos/spotify.png" style="image-rendering: pixelated;">
                 <p>playlist.bb</p>
             </div>
 
-            <div onOpenApp="openWebrings" class="app noSelectText" style="left: 30px; top: 180px;">
+            <div onOpenApp="openWebrings" class="app noSelectText" style="left: 0px; top: 180px;">
                 <img src="./appLogos/webringsLogo.png">
                 <p>webrings</p>
             </div>
 
-            <div onOpenApp="openAboutMe" class="app noSelectText" style="left: 20px; top: 280px;">
+            <div onOpenApp="openAboutMe" class="app noSelectText" style="left: 0px; top: 280px;">
                 <img src="./appLogos/aboutMe.gif">
                 <p>about_me.txt</p>
             </div>
 
-            <div onOpenApp="openNetNeighbors" class="app noSelectText" style="left: 15px; top: 380px;">
+            <div onOpenApp="openNetNeighbors" class="app noSelectText" style="left: 0px; top: 380px;">
                 <img src="./appLogos/netNeighborsLogo.png">
                 <p>neighbors.cool</p>
+            </div>
+
+            <div onOpenApp="openGuestBook" class="app noSelectText" style="left: 0px; top: 480px;">
+                <img src="./appLogos/guestbook.png" style="image-rendering: pixelated;">
+                <p>guest.book</p>
             </div>
         </div>
 
@@ -81,13 +89,14 @@
                 <h3 class="headerTitle">playlist.bb</h3>
                 <p class="closeWindow">❌</p>
             </div>
+            <br>
             <div class="windowContent overflowScroll sfpixelate">
                 <h1>My Beach Bunny Playlist</h1>
-                <h3>It's got all my favorite Beach Bunny songs!</h3>
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6sL7gpBP73YmO7TvHE5pPW?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <h3>It's got all my favorite Beach Bunny songs! And you can find it <a href="https://open.spotify.com/playlist/6sL7gpBP73YmO7TvHE5pPW">here</a></h3>
+                <h3>You can also view my Spotify profile, <a href="https://open.spotify.com/user/lqdrru3nqitffb13bd2ylg7rp">BBM</a></h3>
             </div>
         </div>
-
+        
         <div id="webrings_window" class="window hidden">
             <div class="topBar header noSelectText">
                 <h3 class="headerTitle">webrings</h3>
@@ -119,6 +128,20 @@
                 </div>
                 <br>
 
+                <!-- HTML Energy Webring -->
+                <div id="html-energy-webring">
+                    <script
+                        type="text/javascript"
+                        src="https://www.gabriel-export.earth/html-energy-webring/onionring/variables.js"
+                    ></script>
+                    <script
+                        type="text/javascript"
+                        src="https://www.gabriel-export.earth/html-energy-webring/onionring/widget.js"
+                    ></script>
+                    <!-- 🔺 Order matters here! 🔺 -->
+                </div>
+                <br>
+
 
                 <!--
                 Application statuses
@@ -133,7 +156,6 @@
                 DroidRing: Applied
                 IndieRing: Applied
                 Computering Webring: Applied
-                HTML Energy Webring: Applied
                 Webmaster Webring: Applied
                 -->
 
@@ -259,20 +281,6 @@
                 </div>
                 <br>
 
-                <!-- HTML Energy Webring -->
-                <div id="html-energy-webring">
-                    <script
-                        type="text/javascript"
-                        src="https://www.gabriel-export.earth/html-energy-webring/onionring/variables.js"
-                    ></script>
-                    <script
-                        type="text/javascript"
-                        src="https://www.gabriel-export.earth/html-energy-webring/onionring/widget.js"
-                    ></script>
-                    <!-- 🔺 Order matters here! 🔺 -->
-                </div>
-                <br>
-
                 <div id="webmasteringbtn">
                     <a href="https://webmasterwebring.netlify.app?sabrina-previous">&lt;</a>
                     <a href="https://webmasterwebring.netlify.app">
@@ -347,6 +355,67 @@
                 <textarea style="width: 50%; height: 100px;">
 <a href="https://sabrinaa.page/" target="_blank"><img src="https://sabrinaa.page/buttons/SabrinaaButton.gif" alt="Visit Sabrina's Website!"></a>
                 </textarea>
+            </div>
+        </div>
+
+        <div id="guestbook_window" class="window hidden">
+            <div class="topBar header noSelectText">
+                <h3 class="headerTitle">guest.book</h3>
+                <p class="closeWindow">❌</p>
+            </div>
+            <br>
+            <div class="windowContent overflowScroll sfpixelate" style="max-height: 500px;">
+                <h1>My Guestbook!</h1>
+                <p style="transform: translateY(-75%);">(Pssst! Existing messages are below the form)</p>
+
+                <form id="guestbookSubmit" action="https://sabrinaa.page/guestbookSubmit" method="POST">
+                    <label for="name">Display Name</label>
+                    <br>
+                    <input name="name" type="text" placeholder="Sabrina" required maxlength="100">
+                    <div>This is how you'll show up on the guestbook!</div>
+                    <br>
+
+                    <!-- No <br> for this since its hidden -->
+                    <label for="link" class="hidden">Your website URL</label>
+                    <input name="link" type="text" placeholder="Humans please ignore this one" style="position: absolute; left: -1000px; top: -1000px;">
+                    <div class="hidden">You should not be able to see this field!</div>
+
+                    <label for="websiteUrl">Your website URL</label>
+                    <br>
+                    <input name="websiteUrl" type="text" placeholder="https://sabrinaa.page" maxlength="2000">
+                    <div>This will be hyperlinked onto your display name! Completely optional!</div>
+                    <br>
+
+                    <label for="message">Your message</label>
+                    <br>
+                    <textarea name="message" type="text" placeholder="Just raw text as a message" required maxlength="5000" style="width: 90%; height: 80px;"></textarea>
+                    <div>Say things! Maximum chracter limit is 5000!</div>
+                    <br>
+
+                    <label for="botProtection">Bot Protection</label>
+                    <br>
+                    <input name="botProtection" type="text" placeholder="Sabr..." required>
+                    <div>
+                        To prevent bots from spamming my guestbook I have to add this to prevent them.
+                        To submit can you please type my name, it is 7 letters, not case sensitive, and can be found in my about me
+                    </div>
+                    <br>
+
+                    <input type="submit" value="Sign the guestbook">
+                </form>
+
+                <br><br>
+                <h2>Messages</h2>
+                <div id="guestbookEntries">
+                    <!--
+                    <div class="guestbookEntry">
+                        <p><a>John Doe</a> - 1980-1-1 00:00:00</p>
+                        <p>Hello your website is so freaking cool</p>
+                    </div>
+                    -->
+                </div>
+
+                <script src="./guestBook/guestbook.js"></script>
             </div>
         </div>
 
