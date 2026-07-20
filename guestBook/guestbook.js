@@ -3,7 +3,7 @@ const guestbookFormEle = document.getElementById("guestbookSubmit")
 const guestbookEntriesEle = document.getElementById("guestbookEntries")
 let maxMessageToLoad = 50
 
-//guestbookApiURL = "http://127.0.0.1:5000/"
+//guestbookApiURL = "http://127.0.0.1:5000/" // for testing the guestbook before pushing to prod
 updateGuestBookPostURL()
 
 
