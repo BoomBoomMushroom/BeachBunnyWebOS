@@ -118,6 +118,7 @@ let appFunctions = {
     "openAboutMe": openAboutMe,
     "openNetNeighbors": openNetNeighbors,
     "openGuestBook": openGuestBook,
+    "openVisitorCount": openVisitorCount,
 }
 
 function tapApp(element){
@@ -199,6 +200,12 @@ function openNetNeighbors(){
 
 function openGuestBook(){
     let windowElement = document.getElementById("guestbook_window")
+    makeGreatestZIndex(windowElement)
+    revealElement(windowElement) 
+}
+
+function openVisitorCount(){
+    let windowElement = document.getElementById("visitorCount_window")
     makeGreatestZIndex(windowElement)
     revealElement(windowElement) 
 }
