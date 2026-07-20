@@ -8,7 +8,7 @@ import os
 guestbookEntriesPath = "./guestbookEntries.json"
 webhookUrl = None
 try:
-    with open("./webhookUrl.txt", "r") as f: webhookUrl = f.read()
+    with open("./webhookUrl.txt", "r") as f: webhookUrl = f.read().strip()
 except FileNotFoundError as e:
     print("Didn't find a webhook file, guess we wont use a webhook")
 
