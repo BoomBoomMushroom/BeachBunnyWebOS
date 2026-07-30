@@ -119,6 +119,7 @@ let appFunctions = {
     "openNetNeighbors": openNetNeighbors,
     "openGuestBook": openGuestBook,
     "openVisitorCount": openVisitorCount,
+    "openAndroidLockdownTimer": openAndroidLockdownTimer,
 }
 
 function tapApp(element){
@@ -206,6 +207,12 @@ function openGuestBook(){
 
 function openVisitorCount(){
     let windowElement = document.getElementById("visitorCount_window")
+    makeGreatestZIndex(windowElement)
+    revealElement(windowElement) 
+}
+
+function openAndroidLockdownTimer(){
+    let windowElement = document.getElementById("androidLockdownTimer_window")
     makeGreatestZIndex(windowElement)
     revealElement(windowElement) 
 }
