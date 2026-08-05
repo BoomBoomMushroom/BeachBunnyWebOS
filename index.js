@@ -113,7 +113,6 @@ for(let i=0; i<allApps.length; i++){
 }
 
 let appFunctions = {
-    "openPlaylistBB": openPlaylistBB,
     "openWebrings": openWebringsApp,
     "openAboutMe": openAboutMe,
     "openNetNeighbors": openNetNeighbors,
@@ -166,21 +165,6 @@ function makeGreatestZIndex(element){
 
 
 // open app functions
-function openPlaylistBB(){
-    let windowElement = document.getElementById("playlistBB_window")
-
-    makeGreatestZIndex(windowElement) // move to the top
-    revealElement(windowElement)
-
-    // i've decided i dont like this feature, bye bye ms feature!
-    /*
-    let appIconElement = document.getElementById("openPlaylistAppDiv").getElementsByTagName("img")[0]
-    let newIcons = ["./wallpapers/emotionalCreature.jpg", "./wallpapers/honeymoon.jpg", "./wallpapers/promQueen.jpg", "./wallpapers/tunnelVision.jpg", "./wallpapers/yearOfTheOptimist.jpg", ]
-    let i = Math.floor(Math.random() * newIcons.length)
-    appIconElement.src = newIcons[i]
-    */
-}
-
 function openWebringsApp(){
     let windowElement = document.getElementById("webrings_window")
     makeGreatestZIndex(windowElement) // move to the top
