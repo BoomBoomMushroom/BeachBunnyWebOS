@@ -98,7 +98,7 @@ def guestbookSubmit():
 
     # Just invalid data passed it, nothing to call home abt (haha get it, cause im doing webhooks)
     if len(name) > 100: return failData # Too large of a name
-    if len(message) > 5000: return failData # message too large
+    if len(message) > 1600: return failData # message too large
     if len(websiteUrl) > 2000: return failData # HAS to be a fake url b/c they cannot be longer than 2000 chars
 
     # Check for offensive stuff and slurs and bad things
