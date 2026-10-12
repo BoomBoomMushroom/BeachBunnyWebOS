@@ -4,7 +4,7 @@ My super cool and awesome personal website that looks like a computer
 
 ![hero image](./readme/hero.png)
 
-Live URL: https://beachbunnyos.netlify.app/
+Live URL: https://sabriaa.page
 
 Features:
 - playlist.bb app, you can see my beach bunny playlist
